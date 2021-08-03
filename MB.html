@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MB</title>
+    <script src="jquery-3.5.0.js"></script>
+</head>
+<body>
+    <div class = "game">
+    <div class = "logo">МОРСКОЙ БОЙ</div>
+    <div id="uModalName" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class = "text2">Ваше имя:</span>
+                <input type="text" id = "uNameInput" class="text2">
+                <br>
+                <button id = "saveName">Сохранить</button>
+            </div>
+            <div class="modal-footer text2">
+                
+              </div>
+        </div>
+    </div>
+
+    <div id="uModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="uClose">&times;</span>
+                <div class = "text2">Поздравляем!</div>
+            </div>
+            <div class="modal-body">
+                <div class = "text2">Вы победили!!!</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="bModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="bClose">&times;</span>
+                <div class = "text2"> </div>
+            </div>
+            <div class="modal-body">
+                <div class = "text2">Вы проиграли!!(((</div>
+            </div>
+        </div>
+    </div>
+    <div class = "uName">User</div>
+        <div class = "uScore">
+            <div class = "score text4" draggable="true">0</div>
+        </div>
+        <div class = "topScore">
+            <div class = "text2">Результаты</div>
+            <hr style = "height: 3px; background: #015965;">
+            <hr style = "height: 3px; width: 100%; position: absolute; bottom: 30px; background: #015965;">
+            <div class = "trash">МУСОРКА</div>
+        </div>
+    <div>
+    <div id="User">
+        <table id="alf" cellspacing='0'>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+        </tr></table>
+        <div id="number">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div> 
+        <div id="map"></div>
+
+    <div id = 'ships'>
+        <div id="btns">
+            <input type="radio" name ="ship" style="margin-bottom: 10px;" id="s4" checked>
+            <input type="radio" name ="ship" style="margin-bottom: 10px;" id="s3">
+            <input type="radio" name ="ship" style="margin-bottom: 10px;" id="s2">
+            <input type="radio" name ="ship" style="margin-bottom: 10px;" id="s1">
+        </div>
+        <div id="ship4">
+            <div style="border-right:1px solid white;width:20px;" >&nbsp</div>
+            <div style="border-right:1px solid white;width:20px;">&nbsp</div>
+            <div style="border-right:1px solid white;width:20px;">&nbsp</div>
+        </div>
+        <div id="ship3">
+            <div style="border-right:1px solid white;width:20px;">&nbsp</div>
+            <div style="border-right:1px solid white;width:20px;">&nbsp</div>
+        </div>
+        <div id="ship2">
+            <div style="border-right:1px solid white;width:20px;">&nbsp</div>
+
+        </div>
+        <div id="ship1"></div>
+        <div id="btn2">
+            <input type="radio" name ="direction" id = "horiz" checked> <span class = "text1">Horizontally</span>
+            <input type="radio" name ="direction" id = "vertical"> <span class = "text1">Vertically</span>
+        </div>
+        <div style = "position: absolute; top: 115px; left: 20px;">
+            <input type="checkbox" id = "auto"> <span class = "text1">Авторасстановка</span>
+        </div>
+        
+        <div style = "position: absolute; top: 140px; left: 20px;">
+            <button class = "text1 clear" id = "clear">Очистить поле</button>
+        </div>
+    </div>
+</div>
+    <div class = "text3 bName">BOT</div>
+    <div class = "bScore">
+        <div class = "score text4">0</div>
+    </div>
+<div id="Bot">
+    <table id="alf" cellspacing='0'>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+        </tr></table>
+        <div id="number">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div> 
+<div id="map2" ></div> 
+<div id="menuBot"> 
+    <div id="btnB">
+    <input type="radio" name ="complexity" id = "e" checked> <span class = "text1">Eazy</span><br>
+    <input type="radio" name ="complexity" id = "m"> <span class = "text1">Medium</span><br>
+    <input type="radio" name ="complexity" id = "h"> <span class = "text1">Hard</span><br>
+    </div>
+</div>
+</div>
+<div>
+    <button id="start">Начать бой!</button>
+</div>
+</div>
+    <canvas id="canvas"></canvas>
+    <script src="mb.js" defer></script>
+</body>
+<footer>
+    <div class = "text2">Сайт на стадии разработки(((</div>
+</footer>
+</html>
